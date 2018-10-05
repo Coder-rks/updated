@@ -26,7 +26,7 @@ class GCNavbar extends Component {
             <Glyphicon glyph="user" className="gcUserIcon gcWhite" />
             <Navbar.Brand>
               <Link to="/" className="gcWhite">
-                1GC
+                <img src={'/images/a-icon@2x.png'}  style={{ height: "55px", width: "70px" }}/>
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />

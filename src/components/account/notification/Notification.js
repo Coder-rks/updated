@@ -19,7 +19,7 @@ class Notification extends Component {
         <Grid>
           <Row>
             <Col xs={12}>Action</Col>
-            <Col xs={12} className="gcMedGrey">
+            <Col xs={12} className="gcInfo">
               {this.props.action}
             </Col>
           </Row>
@@ -28,10 +28,10 @@ class Notification extends Component {
             <Col xs={6}>Date</Col>
           </Row>
           <Row>
-            <Col xs={6} className="gcMedGrey">
+            <Col xs={6} className="gcInfo">
               {this.props.actor}
             </Col>
-            <Col xs={6} className="gcMedGrey">
+            <Col xs={6} className="gcInfo">
               <Moment format="MMM DD, YYYY">{this.props.dateVal}</Moment>
             </Col>
           </Row>

@@ -85,7 +85,7 @@ class Welcome extends Component {
   render() {
     return (
       <div>
-        <h4 className="gcPageHeader gcBlueText">Welcome!</h4>
+        <h4 className="gcPageHeader gcBlueText gcBold-300">Welcome!</h4>
         <p className="gcGreyText gcStandardText">Simple Secure Access</p>
         <Panel className="welcomeCard">
           <form>
@@ -107,15 +107,15 @@ class Welcome extends Component {
                 style={{ marginBottom: "20px" }}
               />
             </FormGroup>
-            <h6 className="gcBlueText">FORGOT PASSWORD?</h6>
+            <h6 className="gcBlueText gcBold-300 gcFont-10">FORGOT PASSWORD?</h6>
           </form>
         </Panel>
-        <p className="gcGreyText">
+        <p className="gcGreyText gcFont-10">
           Your oneGC key can be used to access multiple online
           <br />
-          <a className="gcBlueText">enabled services</a>
+          <a className="gcBlueText">Enabled Services</a>
         </p>
-        <div className="loginButtonContainer">
+        <div className="loginButtonContainer gcPT-20 gcPB-72">
           <Button
             className="gcButton"
             style={{ color: "#404040", backgroundColor: "#d1d1d1",width: '35vw' }}

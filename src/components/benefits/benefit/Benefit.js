@@ -17,13 +17,13 @@ class Benefit extends Component {
       <Panel className="benefit">
         <Grid>
           <Row>
-            <Col className="gcBold" xs={12}>{this.props.name}</Col>
+            <Col className="gcInfo" xs={12}>{this.props.name}</Col>
           </Row>
           <Row>
-            <Col style={{WebkitBoxOrient: 'vertical'}} className="gcMedGrey gcNoWrap" xs={12}>{this.props.description}</Col>
+            <Col style={{WebkitBoxOrient: 'vertical'}} className="gcHeader gcNoWrap" xs={12}>{this.props.description}</Col>
           </Row>
           <Row>
-            <Col xs={12} style={{display: 'flex', justifyContent:'center'}}>
+            <Col xs={8} xsOffset={4} style={{display: 'flex', justifyContent:'center'}}>
               <a  target="_blank" href={this.props.detailsLink} style={{marginTop: '15px', padding:"5px", paddingRight: '25px', paddingLeft: '25px'}} className="blueButton gcButton">View</a>
             </Col>
           </Row>

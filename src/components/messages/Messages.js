@@ -67,8 +67,8 @@ class Messages extends Component {
   
   render() {
     return (
-      <div>
-        <h4 className="gcPageHeader gcBlueText">
+      <div className = "gcPB-72">
+        <h4 className="gcPageHeader gcBlueText" style = {{fontSize: "16px"}}>
           Message Centre - Account Notifications
         </h4>
         <p className="gcGreyText gcStandardText">

@@ -55,3 +55,19 @@
 .navbar-default .navbar-nav>li>a{
   color:white;
 }
+/*overrides*/
+.navbar-brand{
+  padding:0px;
+}
+.navbar-toggle{
+  margin-top:10px!important;
+  padding: 9px 4px;
+}
+.navbar-collapse{
+  border-color:#13438C!important;
+}
+
+.nav > li > a {
+  padding : 10px 3px;
+}
+

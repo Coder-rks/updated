@@ -19,16 +19,16 @@ class Message extends Component {
         <Panel className="result">
           <Grid>
             <Row>
-              <Col xs={12}>Account Type</Col>
-              <Col xs={12} className="gcMedGrey">
+              <Col xs={12} className = "gcHeader">Account Type</Col>
+              <Col xs={12} className="gcInfo">
                 {this.props.accountType}
               </Col>
             </Row>
             <Row>
-              <Col xs={12}>Status</Col>
+              <Col xs={12} className = "gcHeader">Status</Col>
             </Row>
             <Row>
-              <Col style={{WebkitBoxOrient: 'vertical'}} xs={12} className="gcMedGrey gcNoWrap">
+              <Col style={{WebkitBoxOrient: 'vertical'}} xs={12} className="gcInfo gcNoWrap">
                 {this.props.status}
               </Col>
             </Row>

@@ -5,6 +5,7 @@ import "./pagination.css";
 class Pagination extends Component {
   render() {
     return (
+    <div className = "container">
       <ButtonToolbar>
         <Button className="paginationButton arrow">
           <Glyphicon glyph="arrow-left" />
@@ -17,12 +18,13 @@ class Pagination extends Component {
           <Button className="paginationButton">5</Button>
           <Button className="paginationButton">6</Button>
           <Button className="paginationButton">7</Button>
-          <Button className="paginationButton">8</Button>
+        
         </div>
         <Button className="paginationButton arrow">
           <Glyphicon glyph="arrow-right" />
         </Button>
       </ButtonToolbar>
+      </div>
     );
   }
 }

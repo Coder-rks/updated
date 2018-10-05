@@ -55,7 +55,7 @@ class Benefits extends Component {
   }
   render() {
     return (
-      <div>
+      <div className = "gcPB-72">
         <Link
           to="/benefits/enrollment"
           style={{ color: "white", backgroundColor: "#1958b7", float: "right" }}

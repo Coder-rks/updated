@@ -67,7 +67,7 @@ class Account extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "gcPB-72">
         <h4 className="gcPageHeader gcBlueText">Account History</h4>
         <p className="gcGreyText gcStandardText">
           Review and check the status or Read messages about your account

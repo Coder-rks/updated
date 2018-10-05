@@ -1,11 +1,39 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("/fonts/AvenirNextLTPro-Regular.otf"); /* File to be stored at your site */
+  }
+  body{
+     font-family: 'Avenir Next';
+  }
 .gcBlueText {
-  color: #1958b7;
+  color: #015A9A
 }
 .gcBold {
   font-weight: 700;
 }
+.gcBold-300{
+  font-weight: 300;
+}
+.gcFont-10{
+  font-size: 10px;
+}
+.gcPT-20{
+  padding-top: 20px;
+}
+.gcPB-72{
+  padding-bottom : 72px;
+}
 .gcBlueBackground {
   background-color: #1958b7 !important;
+}
+.gcHeader{
+  color:#515151;
+  font-size:13px;
+}
+.gcInfo{
+  color:#515151;
+  font-size:12px;
+  font-weight:bold;
 }
 
 .gcWhiteText {
@@ -27,6 +55,15 @@
   font-weight: 100;
 }
 
+.gcEnrollHeader{
+color:#515151;
+font-size:16px;
+font-weight:400;
+}
+.gcEnrollInfo{
+color:#515151;
+font-weight:100;
+}
 .gcMedGrey {
   color: #404040;
   font-weight: 400;
@@ -34,7 +71,7 @@
 
 .gcStandardText {
   font-size: 16px;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
 }
 
 .gcPageHeader {
@@ -60,9 +97,10 @@
 }
 
 .form-control {
-  background-color: #e7e7e7 !important;
+  background-color: #ececec !important;
   border: none !important;
   border-radius: 0px !important;
+  color: #515151;
 }
 
 #root > div > div > .container {

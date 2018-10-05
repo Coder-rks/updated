@@ -14,22 +14,27 @@ class Home extends Component {
               You have no outstanding messages
             </Panel.Body>
           </Panel>
-          <div className="tileContainer">
+          <div className="tileContainer gcPB-72">
             <Link to="/home" className="homeTile" >
-              <div className="titleImageContainer">Image Placeholder</div>
-              <span className="gcBlueText gcStandardText">News</span>
+              <div className="titleImageContainer">
+                    <img src={'/images/c-news-TILE.png'} />
+              </div>
+              {/*<span className="gcBlueText gcStandardText">News</span>*/}
             </Link>
             <Link to="/messages" className="homeTile">
-              <div className="titleImageContainer">Image Placeholder</div>
-              <span className="gcBlueText gcStandardText">Notifications</span>
+              <div className="titleImageContainer">
+                    <img src={'/images/c-notifications-TILE.png'} />
+              </div>
             </Link>
             <Link to="/account" className="homeTile">
-              <div className="titleImageContainer">Image Placeholder</div>
-              <span className="gcBlueText gcStandardText">Account History</span>
+              <div className="titleImageContainer">
+                    <img src={'/images/c-account-TILE.png'} />
+              </div>
             </Link>
             <Link to="/benefits" className="homeTile">
-              <div className="titleImageContainer">Image Placeholder</div>
-              <span className="gcBlueText gcStandardText">Benefits</span>
+              <div className="titleImageContainer">
+                    <img src={'/images/c-benefits-TILE.png'} />
+              </div>
             </Link>
           </div>
         </div>
