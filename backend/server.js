@@ -184,5 +184,30 @@ app.post("/api/benefits", function(req, res) {
   });
 });
 
+app.post('/api/verify_details', function(req, res){
+  pool.connect((err, db, done) => {
+  if(err){
+    return console.log(err);
+  } else {
+  db.query('SELECT * from salesforceonegc.onegc_citizen_profile__c where sfid = $1',['a780b000000AKaFAAW'], (err, table) =>{
+      done();
+      if(err){
+        return console.log(err);
+      } 
+      else if (!table.rows.length) {
+        res.status(200).send({message: 'User Not found in Database!!'});
+      }
+      else {
+        console.log(table.rows[0].one_gc_email__c);
+        console.log(table.rows[0].name);
+        res.status(200).send(table.rows);
+        
+      }
+    });
+  }
+}); 
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Listening on port " + PORT));

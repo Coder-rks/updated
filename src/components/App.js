@@ -9,6 +9,7 @@ import Account from "./account/Account";
 import Enrollment from "./enrollment/Enrollment";
 import Benefits from "./benefits/Benefits";
 import Notice from "./notice/Notice";
+import Verify from "./verify/Verify";
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
           <GCNavBar />
           <div className="container">
             <Route exact path="/" component={Welcome} />
+            <Route exact path="/verify" component={Verify} />
             <Route exact path="/notice" component={Notice} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Welcome} />
