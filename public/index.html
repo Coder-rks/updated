@@ -10,6 +10,10 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -20,12 +24,21 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+            setTimeout(function() {
+                   document.getElementById("splash").style.display="none";
+                   document.getElementById("root").style.display="block";
+            }, 1000);
+        });
+  </script>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id = "splash" style ="z-index:100"><img src="/images/b-splash0@2x.png"></div>
+    <div id="root" style = "display:none"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
