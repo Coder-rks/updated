@@ -88,7 +88,6 @@ class Welcome extends Component {
    
     return (
       <div>
-      
         <h4 className="gcPageHeader gcBlueText gcBold-300">Welcome!</h4>
         <p className="gcGreyText gcStandardText">Simple Secure Access</p>
         <Panel className="welcomeCard">
