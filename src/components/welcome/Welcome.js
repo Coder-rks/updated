@@ -12,7 +12,7 @@ import {
   Row,
   Col
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Redirect  } from "react-router-dom";
 
 import "./welcome.css";
 
@@ -22,14 +22,15 @@ class Welcome extends Component {
 
     this.handlePWChange = this.handlePWChange.bind(this);
     this.handleLoginChange = this.handleLoginChange.bind(this);
-
     this.state = {
       loginValue: "",
       pwValue: "",
        title : 'Simple app',
       users : [],
-      error : ''
+      error : '',
+      redirect: 'false'
     };
+    // this.state.redirect = this.state.redirect.bind(this)
   }
 
    verifyUser(event){
@@ -53,7 +54,6 @@ class Welcome extends Component {
                 that.setState({
                   users : users
       })
-
     // xmlhttprequest
     if(user_data.email && user_data.password){
        fetch(request)
@@ -61,7 +61,10 @@ class Welcome extends Component {
         response.json()
           .then(function(data){
             alert(data.message);
-
+             
+            // this.setState({redirect: 'true'});
+          
+            // return <Redirect to="/verify" />
           })
       })
       .catch(function(err){
@@ -70,9 +73,8 @@ class Welcome extends Component {
     } else {
        this.state.error = 'Login Error';
     }
-
-
 }
+
 
   handlePWChange(e) {
     this.setState({ pwValue: e.target.value });
@@ -83,8 +85,10 @@ class Welcome extends Component {
   }
 
   render() {
+   
     return (
       <div>
+      
         <h4 className="gcPageHeader gcBlueText gcBold-300">Welcome!</h4>
         <p className="gcGreyText gcStandardText">Simple Secure Access</p>
         <Panel className="welcomeCard">
@@ -108,6 +112,7 @@ class Welcome extends Component {
               />
             </FormGroup>
             <h6 className="gcBlueText gcBold-300 gcFont-10">FORGOT PASSWORD?</h6>
+            <div className = "align-left  PL-14 color-danger font-10" id= "login_error" style ={{color: '#c0392b'}}>{this.state.error}</div>
           </form>
         </Panel>
         <p className="gcGreyText gcFont-10">
@@ -136,7 +141,8 @@ class Welcome extends Component {
 
           <Link to="/home"
           className="gcButton btn btn-default"
-          style={{ color: "white", backgroundColor: "#1958b7", width: '35vw' }}>
+          style={{ color: "white", backgroundColor: "#1958b7", width: '35vw' }} 
+          onClick = {this.verifyUser.bind(this)}>
           Sign In
           </Link>
         </div>
