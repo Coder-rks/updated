@@ -30,7 +30,6 @@ class Welcome extends Component {
       error : '',
       redirect: 'false'
     };
-    // this.state.redirect = this.state.redirect.bind(this)
   }
 
    verifyUser(event){
@@ -60,11 +59,12 @@ class Welcome extends Component {
       .then(function(response){
         response.json()
           .then(function(data){
-            alert(data.message);
-             
-            // this.setState({redirect: 'true'});
-          
-            // return <Redirect to="/verify" />
+            // alert(data.message);
+            if(data == true){
+              that.setState((state) =>({redirect: 'true'}));
+            } else {
+              that.setState((state) =>({error: 'Invalid'}));
+            }
           })
       })
       .catch(function(err){
@@ -85,7 +85,10 @@ class Welcome extends Component {
   }
 
   render() {
-   
+   const redirect = this.state.redirect;
+    if (redirect === 'true') {
+              return <Redirect to='/verify'/>;
+    } 
     return (
       <div>
       

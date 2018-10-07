@@ -58,29 +58,30 @@ app.post("/api/login", function(req, res) {
             console.log(table.rows[0].name);
             if (user_email == table.rows[0].one_gc_email__c) {
               console.log(true);
-              res
-                .status(200)
-                .send({
-                  message:
-                    "Welcome!! User FOUND in Database with details: SSN: " +
-                    table.rows[0].onegc_social_insurance_number__c +
-                    " " +
-                    "Name: " +
-                    table.rows[0].name +
-                    " " +
-                    table.rows[0].onegc_middle_name__c +
-                    " " +
-                    table.rows[0].onegc_last_name__c +
-                    " " +
-                    "Country: " +
-                    table.rows[0].onegc_country__c +
-                    " " +
-                    "Email: " +
-                    table.rows[0].one_gc_email__c +
-                    " " +
-                    "Phone: " +
-                    table.rows[0].onegc_mobile_phone__c
-                });
+              res.send(true);
+              // res
+              //   .status(200)
+              //   .send({
+              //     message:
+              //       "Welcome!! User FOUND in Database with details: SSN: " +
+              //       table.rows[0].onegc_social_insurance_number__c +
+              //       " " +
+              //       "Name: " +
+              //       table.rows[0].name +
+              //       " " +
+              //       table.rows[0].onegc_middle_name__c +
+              //       " " +
+              //       table.rows[0].onegc_last_name__c +
+              //       " " +
+              //       "Country: " +
+              //       table.rows[0].onegc_country__c +
+              //       " " +
+              //       "Email: " +
+              //       table.rows[0].one_gc_email__c +
+              //       " " +
+              //       "Phone: " +
+              //       table.rows[0].onegc_mobile_phone__c
+              //   });
             } else {
               console.log(false);
               res.send(false);
