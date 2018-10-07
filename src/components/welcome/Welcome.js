@@ -32,6 +32,7 @@ class Welcome extends Component {
     };
   }
 
+
    verifyUser(event){
     var that = this;
     event.preventDefault();

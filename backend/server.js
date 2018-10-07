@@ -59,6 +59,7 @@ app.post("/api/login", function(req, res) {
             if (user_email == table.rows[0].one_gc_email__c) {
               console.log(true);
               res.send(true);
+              
               // res
               //   .status(200)
               //   .send({
